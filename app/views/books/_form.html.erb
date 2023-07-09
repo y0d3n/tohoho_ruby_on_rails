@@ -1,0 +1,16 @@
+<%= form_with model: book do |form| %>
+<div>
+    <div><%= form.label :title %></div>
+    <div><%= form.text_field :title %></div>
+    <% @book.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+    <div><%= form.label :author %></div>
+    <div><%= form.text_field :author %></div>
+</div>
+<div>
+    <%= form.submit %>
+</div>
+<% end %>

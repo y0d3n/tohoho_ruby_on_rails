@@ -1,0 +1,8 @@
+<h1>My Application</h1>
+<%= @message %>
+
+<ul>
+<% @menus.each do |menu| %>
+    <li><%= link_to(menu[:label], menu[:path]) %></li>
+<% end %>
+</ul>
